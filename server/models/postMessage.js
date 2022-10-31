@@ -7,10 +7,8 @@ const postSchema = mongoose.Schema({
     creator: String,
     tags: [String],
     selectedFile: String,
-    location: {
-        type: geoLocation,
-        default: new geoLocation()
-    }
+    latitude: Number,
+    longitude: Number
 });
 
 const PostMessage = mongoose.model('PostMessage', postSchema);
